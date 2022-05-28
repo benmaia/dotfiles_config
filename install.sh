@@ -13,7 +13,6 @@ git -C ~/ clone https://github.com/benmaia/nvim.git
 # Install neovim config
 sudo cp -r /home/$(whoami)/dotfiles_config/nvim /home/$(whoami)
 ~/nvim/./install.sh
-rm -rf /home/$(whoami)/nvim
 
 #ZSH shell
 [ -f "/usr/bin/zsh" ] || sudo apt install zsh -y || chsh -s $(which zsh)
