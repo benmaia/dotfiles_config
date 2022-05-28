@@ -7,8 +7,8 @@ sudo apt update && sudo apt upgrade -y
 [ -f "/usr/bin/git" ] || sudo apt install git -y
 [ -f "/usr/bin/curl" ] || sudo apt install curl -y
 
-# Init submodules
-cd /home/$(whoami)/dotfiles_config && git submodule init && git submodule update --remote
+# Nvim git
+git -C ~/ clone https://github.com/benmaia/nvim.git
 
 # Install neovim config
 sudo cp -r /home/$(whoami)/dotfiles_config/nvim /home/$(whoami)
