@@ -11,11 +11,12 @@ sudo apt update && sudo apt upgrade -y
 git -C ~/ clone https://github.com/benmaia/nvim.git
 
 # Install neovim config
+cd /home/$(whoami)/nvim && ./install.sh
 sudo cp -r /home/$(whoami)/dotfiles_config/nvim /home/$(whoami)
-~/nvim/./install.sh
 
 #ZSH shell
-[ -f "/usr/bin/zsh" ] || sudo apt install zsh -y || chsh -s $(which zsh)
+sudo apt install zsh -y
+chsh -s $(which zsh)
 [ -d "/home/$(whoami)/.oh-my-zsh" ] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 #ZSH config
