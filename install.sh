@@ -12,7 +12,9 @@ git submodule init
 git submodule update
 
 # Install neovim config
-cd nvim && ./install.sh
+sudo cp -r /home/$(whoami)/dotfiles_config/nvim /home/$(whoami)
+~/nvim/./install.sh
+rm -rf /home/$(whoami)/nvim
 
 #ZSH shell
 [ -f "/usr/bin/zsh" ] || sudo apt install zsh -y || chsh -s $(which zsh)
