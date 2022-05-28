@@ -7,12 +7,9 @@ sudo apt update && sudo apt upgrade -y
 [ -f "/usr/bin/git" ] || sudo apt install git -y
 [ -f "/usr/bin/curl" ] || sudo apt install curl -y
 
-# Nvim git
-git -C ~/ clone https://github.com/benmaia/nvim.git
-
 # Install neovim config
+git -C ~/ clone https://github.com/benmaia/nvim.git
 cd /home/$(whoami)/nvim && ./install.sh
-sudo cp -r /home/$(whoami)/dotfiles_config/nvim /home/$(whoami)
 
 #ZSH shell
 sudo apt install zsh -y
